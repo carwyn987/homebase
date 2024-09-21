@@ -25,3 +25,5 @@ export HISTIGNORE="ls:cd:cd .."
 
 export VISUAL=vim
 export EDITOR="VISUAL"
+
+alias reload='echo "Reloading shell..."; export TERM=xterm; exec env -i HOME=$HOME TERM=$TERM bash -l'

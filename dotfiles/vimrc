@@ -93,10 +93,6 @@ augroup END
 set cursorline
 set cursorcolumn
 
-" Set chars for whitespace
-set listchars=tab:»\ ,trail:•,nbsp:•
-set list
-
 " Ignore case for files in command-line mode
 set wildignorecase
 
@@ -250,7 +246,7 @@ endfunction
 
 
 " Setup macros
-let @n=':call SetFnLn()il'
+let @n=':call SetFnLn()'
 
 " TODO Rethink some of these?
 nnoremap <Leader>e :call OpenFileWithLineNumber('e')<CR>
@@ -322,3 +318,22 @@ let @f='0f{zf%'
 " TODO
 " Window resizing
 " tab mover
+
+set timeoutlen=150
+
+" SET KEYBINDS
+
+   """ Set 'jk' to 'escape'
+
+      " esc in insert & visual mode
+      inoremap jk <esc>
+      vnoremap jk <esc>
+
+      " esc in command mode
+      cnoremap jk <C-C>
+      " Note: In command mode mappings to esc run the command for some odd
+      " historical vi compatibility reason. We use the alternate method of
+      " exiting which is Ctrl-C
+
+
+   """ Set _

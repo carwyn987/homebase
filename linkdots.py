@@ -74,7 +74,7 @@ def link_dotfiles(config_path=None, files=None, include_git=False):
 
     home = os.environ['HOME']
     config_path = os.path.join(home, config_path) if config_path is not None else home
-    dot_path = os.path.join(config_path, 'config', 'dotfiles')
+    dot_path = os.path.join(config_path, 'homebase', 'dotfiles')
     for filename in filenames:
         src = os.path.abspath(os.path.join(dot_path, filename))
         dst = os.path.join(home, '.'+filename)
